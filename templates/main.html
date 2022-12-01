@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Pacifico&family=Roboto+Mono:wght@200&display=swap"
+        rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Pacifico&family=Roboto+Mono:wght@200&display=swap');
+    </style>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">
+            <img src="{{url_for('static', filename='assets/lockheedmartinlogo.png')}}" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content:end;">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active" style="font-family:Oswald,sans-serif;">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item" style="font-family:Oswald,sans-serif;">
+                    <a class="nav-link" href="#aboutus">About</a>
+                </li>
+                <li class="nav-item dropdown" style="font-family:Oswald,sans-serif;">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Career
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#gallery">Gallery</a>
+                        <a class="dropdown-item" href="#">Video</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Catalog</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{url_for('static', filename='assets/switzerlandmountain.jpeg')}}" class="d-block w-100"
+                    alt="apache">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="font-weight-bold" style="font-size:35px;">Switzerland Mountain</h5>
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{{url_for('static', filename='assets/waterscarcity.jpg')}}" class="d-block w-100"
+                    alt="himars">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="font-weight-bold" style="font-size:35px;">Water Scarcity </h5>
+                    <p>Water scarcity takes a greater toll on women and children because they are often the ones
+                        responsible for collecting it. When water is further away, it requires more time to collect,
+                        which often means less time at school. Particularly for girls, a shortage of water in schools
+                        impacts student enrolment, attendance and performance. Carrying water long distances is also an
+                        enormous physical burden and can expose children to safety risks and exploitation.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{{url_for('static', filename='assets/thepowerofwater.jpg')}}" class="d-block w-100"
+                    alt="mig31">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="font-weight-bold" style="font-size:35px;">The Power Of Water</h5>
+                    <p>Water connects every aspect of life. Access to safe water and sanitation can quickly turn
+                        problems into potential – empowering people with time for school and work, and contributing to
+                        improved health for women, children, and families around the world. </p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+
+    </div>
+
+    <div class="row">
+        <div class="col-8" id="aboutus" style="padding-bottom:2vh;">
+            <h4 style="margin-left: 10  vh;font-family:Oswald,sans-serif">WATER QUALITY PREDICTION</h4>
+            <form action="/" method="POST" class="">
+                <div class=" form-group">
+                    <label for="exampleInputEmail1">Aluminium</label>
+                    <input type="number " id="aluminium" name="aluminium" class="form-control">
+                    <label for=" exampleInputEmail1">Flouride</label>
+                    <input type="number " id="flouride" name="flouride" class="form-control">
+                    <label for="exampleInputEmail1">Bacteria</label>
+                    <input type="number " id="bacteria" name="bacteria" class=" form-control">
+                    <label for="exampleInputEmail1">Viruses</label>
+                    <input type="number " id="viruses" name="viruses" class="form-control">
+                    <label for="exampleInputEmail1">Uranium</label>
+                    <input type="number " id="uranium" name="uranium" class="form-control">
+
+                    <button style="margin-top:5px;" type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="hasil-prediksi">
+        <h3>RESULT</h3>
+        <p>{{ output }}</p>
+    </div>
+
+    <div class="container3">
+        <div class="row">
+            <div class="col-8" id="gallery" style="padding-bottom:2vh;">
+                <h1 style="margin-left: 75vh;margin-top: 3vh;">GALLERY</h1>
+            </div>
+            <div class="row" style="margin-left:5vh;padding-bottom:3vh;">
+                <div class="col">
+                    <div class="card bg-dark" style="width: 18rem;font-family:Oswald,sans-serif;">
+                        <img class="card-img-top" src="{{url_for('static', filename='assets/g20.jpg')}}"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color:white;font-family:Oswald,sans-serif;">
+                                Indonesia G20
+                            </h5>
+                            <p class="card-text" style="color:white;font-family:Oswald,sans-serif;">
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-dark" style="width: 18rem;">
+                        <img class="card-img-top" src="{{url_for('static', filename='assets/Israel_Pal_breifing.jpg')}}"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color:white;font-family:Oswald,sans-serif;">
+                                West Era Is Over</h5>
+                            <p class="card-text" style="color:white;font-family:Oswald,sans-serif;"></p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-dark" style="width: 18rem;">
+                        <img class="card-img-top" src="{{url_for('static', filename='assets/hornet.jpg')}}"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color:white;font-family:Oswald,sans-serif;">Hues
+                                of the
+                                Hornet
+                            </h5>
+                            <p class="card-text" style="color:white;font-family:Oswald,sans-serif;">
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-dark" style="width: 18rem;">
+                        <img class="card-img-top" src="{{url_for('static', filename='assets/Erdogan.jpg')}}"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color:white;font-family:Oswald,sans-serif;">Syria Endgame
+                            </h5>
+                            <p class="card-text" style="color:white;font-family:Oswald,sans-serif;">New offensive
+                                against Kurdish fighters in Syria is still on agenda until security issues are
+                                addressed, Erdogan says.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
