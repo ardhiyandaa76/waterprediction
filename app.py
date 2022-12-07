@@ -34,7 +34,7 @@ def index():
 
         predTree = isSafe.predict(x_new)
         output = predTree[0]
-        # convert output to string
+        # convert int to string
         if output == 1:
             output = "Good"
         else:
