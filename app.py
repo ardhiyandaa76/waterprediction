@@ -34,6 +34,11 @@ def index():
 
         predTree = isSafe.predict(x_new)
         output = predTree[0]
+        # convert output to string
+        if output == 1:
+            output = "Good"
+        else:
+            output = "Bad"
 
         return render_template('main.html', output=output)
     else:
