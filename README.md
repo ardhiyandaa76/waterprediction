@@ -18,3 +18,11 @@ Untuk melakukan klasifikasi, menggunakan metode Decision Tree
  isSafe = DecisionTreeClassifier(criterion="gini", max_depth=10)
  isSafe.fit(x_train, y_train)
  ```
+ 
+ # Melakukan Prediksi
+ ```
+ x_new = np.array((aluminium, flouride, bacteria, viruses, uranium))
+ x_new = np.reshape(x_new, (1, -1))
+ predTree = isSafe.predict(x_new)
+ output = predTree[0]
+ ```
