@@ -6,6 +6,34 @@ Water prediction merupakan sebuah aplikasi berbasis website yang berfungsi untuk
 * Mengubah tipe data kolom dari object ke int
 * Melakukan ekspor dataframe yang lama ke dataframe baru setelah menghapus beberapa kolom
 
+Untuk membaca Data Frame
+```
+df = pd.read_csv('waterQuality1.csv')
+df.head()
+```
+<br>
+Melakukan penghapusan kolom 
+
+```
+df = df.drop(['ammonia', 'arsenic', 'barium', 'cadmium', 'chloramine', 'chromium', 'copper', 'lead', 'nitrates', 'nitrites', 'mercury', 'perchlorate', 'radium', 'selenium', 'silver'], axis=1)
+```
+<br>
+Membuat x dan y dimana x merupakan predictor dan y outcome
+
+```
+y = df['is_safe']
+x = df[['aluminium', 'flouride', 'bacteria', 'viruses', 'uranium']]
+```
+Melakukan konversi nilai NULL ke 0 pada kolom outcome
+```
+df['is_safe']= pd.to_numeric(df['is_safe'], errors='coerce').fillna(0).astype(np.int64)
+```
+
+Melakukan ekspor dataframe baru 
+```
+df.to_csv('waterQuality2.csv', index=False)
+```
+
 # Split Data Into Training And Testing
 ```
 x_train, x_test, y_train, y_test = train_test_split(
