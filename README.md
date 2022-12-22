@@ -26,5 +26,5 @@ Untuk melakukan klasifikasi, menggunakan metode Decision Tree
  predTree = isSafe.predict(x_new)
  output = predTree[0]
  ```
- #Dibuat Oleh
+ # Dibuat Oleh
  Agung Kartika Ardhiyanda
