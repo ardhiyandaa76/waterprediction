@@ -1,5 +1,5 @@
 # Water Prediction
-Water prediction merupakan sebuah aplikasi berbasis website yang berfungsi untuk menentukan apakah suatu air yang ingin kita klasifikasikan merupakan air yang aman untuk dikonsumsi atau tidak berdasarkan indeks bakteri, uranium, virus, fluoride, dan aluminium.
+Water prediction merupakan sebuah aplikasi berbasis website yang berfungsi untuk menentukan apakah suatu air yang ingin kita klasifikasikan merupakan air yang aman untuk dikonsumsi atau tidak berdasarkan indeks bakteri, uranium, virus, fluoride, dan aluminium. Adapun pembuatan aplikasi ini yaitu dengan menggunakan bahasa pemrograman Python,HTML,dan Jupyter Notebook.
 # Data Cleaning
 * Menghilangkan beberapa kolom yang tidak penting
 * Melakukan konversi yang kolom yang ada unsur NULL ke 0
